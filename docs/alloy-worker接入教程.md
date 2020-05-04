@@ -1,10 +1,10 @@
-## 接入方式
+# 接入方式
 
 ### 让 Alloy Worker 融为项目源码
 
-前端业务中, Web Worker 需打包为独立文件, 并且业务代码也需要打包进去; 所以 Alloy Worker **并不是一个 npm 包**. 它需要你手动将它融合到你的项目源码里; 好在手动也并不复杂, 而且它不会入侵你的现有业务.
+前端业务中, Web Worker 需打包为独立文件, 并且业务代码也需要打包进去; 所以 Alloy Worker **并不是一个 npm 包**. 它需要你手动将它融合到你的项目源码里; 好在手动并不复杂, 而且它不会入侵你的现有业务.
 
-Alloy Worker 本身是对原始 Web Worker 能力的 RPC 封装, 并在使用方式上给出约定. 接入其实是完成一件单纯的事情: **帮你初始化项目中的 Worker 源码**. 初始化源码后, Web Worker 就是项目的一项基础能力, 你可以自由地去使用和修改它.
+Alloy-worker 是对原始 Web Worker 能力的 RPC 封装, 也是 **Worker 代码组织方式的约定**. 接入其实是完成一件单纯的事情: **帮你初始化项目中的 Worker 源码**. 初始化源码后, Web Worker 就是项目的一项基础能力, 你可以自由地去使用和修改它.
 
 我们使用一个已有项目 - [template](https://github.com/CntChen/template) - 为例子来了解如何手动融合 Alloy Worker.
 
@@ -108,5 +108,9 @@ const alloyWorker = createAlloyWorker({
 console.log('alloyWorker', alloyWorker);
 ```
 
-## EOF
+### Babel
+Alloy Worker 已经称为你项目源码的一部分. 所以代码的 transpile 和 polyfill 需要项目管理.
 
+如果有需要, 关注主线程和 Worker 线程的 `Promise` 和 `async/await` 否是在目标浏览器已经 polyfill.
+
+## EOF
