@@ -17,7 +17,7 @@ Alloy-worker 源码基于 TypeScript 编写, 使用 Webpack4 进行构建. 这�
 ```sh
 $ cd /path/to/test
 $ git clone https://github.com/CntChen/template.git
-$ git clone https://github.com/CntChen/alloy-worker.git
+$ git clone https://github.com/AlloyTeam/alloy-worker.git
 ```
 
 ## 复制 Worker 源码
@@ -155,7 +155,7 @@ chunk {alloy-worker} alloy-worker.js, alloy-worker.js.map (alloy-worker) ...
 ...
 ```
 
-到此, 你的项目已经具备 Web Worker 能力, 怎么使用 alloy-worker, [请看这里](https://github.com/CntChen/alloy-worker/blob/master/docs/alloy-worker%20%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B.md).
+到此, 你的项目已经具备 Web Worker 能力, 怎么使用 alloy-worker, [请看这里](./alloy-worker%20%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B.md).
 
 ## 可能遇到的问题
 ### TypeScript 报错
